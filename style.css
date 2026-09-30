@@ -1,0 +1,247 @@
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* Navigation menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 6%;
+    background: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background: #e62429;
+}
+
+/* Hero section */
+.hero {
+    min-height: 520px;
+    padding: 70px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: #222;
+    color: white;
+}
+
+.hero-text {
+    flex: 1 1 420px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-top: 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 1.1rem;
+}
+
+.hero img {
+    flex: 1 1 400px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 18px;
+    background: #e62429;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background: #b71c1c;
+}
+
+/* Main sections */
+.section {
+    padding: 70px 6%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.alternate {
+    max-width: none;
+    background: white;
+}
+
+/* Main Flexbox example */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1 1 280px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card h3,
+.card p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card h3 {
+    margin-top: 20px;
+}
+
+/* Flexbox settings explanation */
+.settings-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.settings-grid > div {
+    flex: 1 1 280px;
+    padding: 22px;
+    border-left: 5px solid #e62429;
+    background: #f4f4f4;
+}
+
+.settings-grid h3 {
+    margin-top: 0;
+}
+
+/* Responsive demonstration */
+.responsive-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.demo-box {
+    flex: 1 1 250px;
+    min-height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Features */
+.feature-list {
+    max-width: 850px;
+    padding-left: 25px;
+}
+
+.feature-list li {
+    margin-bottom: 15px;
+}
+
+code {
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Responsive media query */
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        background: #222;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 50px;
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111;
+    color: white;
+}

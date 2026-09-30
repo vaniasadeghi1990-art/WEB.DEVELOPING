@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Flexbox Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation menu -->
+    <nav class="navbar">
+        <div class="logo">MARVEL FLEXBOX</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#layout">Layout</a>
+            <a href="#settings">Settings</a>
+            <a href="#responsive">Responsive</a>
+            <a href="#features">Features</a>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-text">
+            <h1>Flexbox &amp; Responsive Web Design</h1>
+            <p>
+                A simple guide to how CSS Flexbox can arrange content,
+                images and information on a web page.
+            </p>
+            <a class="button" href="#layout">Explore the layout</a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=80"
+            alt="Laptop showing a web development workspace"
+        >
+    </header>
+
+    <main>
+        <section id="layout" class="section">
+            <h2>How the content is laid out</h2>
+            <p>
+                This page uses CSS Flexbox for the main content cards.
+                The cards are placed in a row when enough horizontal space
+                is available. When the screen becomes smaller, the cards
+                wrap onto new rows.
+            </p>
+
+            <div class="card-container">
+                <article class="card">
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+                        alt="Code on a computer screen"
+                    >
+                    <h3>HTML</h3>
+                    <p>
+                        HTML provides the structure of the web page,
+                        including headings, paragraphs, images and links.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img
+                        src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?auto=format&fit=crop&w=700&q=80"
+                        alt="Web design code"
+                    >
+                    <h3>CSS</h3>
+                    <p>
+                        CSS controls presentation, design and layout.
+                        It can also create different layouts for different
+                        screen sizes.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <img
+                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+                        alt="Programming code"
+                    >
+                    <h3>Flexbox</h3>
+                    <p>
+                        Flexbox makes it easier to arrange elements in rows
+                        or columns and control their alignment and spacing.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="settings" class="section alternate">
+            <h2>Important Flexbox settings</h2>
+
+            <div class="settings-grid">
+                <div>
+                    <h3>display: flex</h3>
+                    <p>
+                        Turns an element into a flex container. Its direct
+                        child elements become flex items.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>flex-direction</h3>
+                    <p>
+                        Controls the direction of the flex items. Common
+                        values are <strong>row</strong> and <strong>column</strong>.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>flex-wrap</h3>
+                    <p>
+                        Allows items to move onto a new line when there is
+                        not enough space. This page uses <strong>wrap</strong>.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>justify-content</h3>
+                    <p>
+                        Controls the alignment of items along the main axis,
+                        for example <strong>space-between</strong>.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>align-items</h3>
+                    <p>
+                        Controls alignment along the cross axis, such as
+                        <strong>center</strong>.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>gap</h3>
+                    <p>
+                        Adds consistent space between flex items without
+                        needing separate margins on every item.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="responsive" class="section">
+            <h2>How the layout responds to screen size</h2>
+            <p>
+                The page is responsive. The viewport meta tag allows the
+                layout to use the device width. Flexbox wrapping lets the
+                cards move to new rows, while a media query changes the
+                navigation and hero layout on smaller screens.
+            </p>
+
+            <div class="responsive-demo">
+                <div class="demo-box">Large screen<br>3 cards can fit in a row.</div>
+                <div class="demo-box">Medium screen<br>Cards can wrap.</div>
+                <div class="demo-box">Small screen<br>Content becomes one column.</div>
+            </div>
+        </section>
+
+        <section id="features" class="section alternate">
+            <h2>Flexbox features and how to use them</h2>
+
+            <ul class="feature-list">
+                <li><strong>Flex container:</strong> add <code>display: flex;</code> to the parent.</li>
+                <li><strong>Direction:</strong> use <code>flex-direction</code> to choose a row or column.</li>
+                <li><strong>Wrapping:</strong> use <code>flex-wrap: wrap;</code> when items should move to another line.</li>
+                <li><strong>Alignment:</strong> use <code>justify-content</code> and <code>align-items</code>.</li>
+                <li><strong>Spacing:</strong> use <code>gap</code> to create space between items.</li>
+                <li><strong>Flexibility:</strong> flex items can grow or shrink depending on the available space.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Flexbox Assignment | HTML + CSS | Responsive Web Page</p>
+    </footer>
+
+</body>
+</html>
